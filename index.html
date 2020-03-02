@@ -1,5 +1,11 @@
 <html>
 <body>
   <p>ドメインB index.html</p>
+  <script>
+    (function() {
+      var storageData = sessionStorage.getItem('jwt_token');
+      alert(storageData);
+    })();
+  </script>
 </body>
 </html>
