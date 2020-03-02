@@ -3,7 +3,7 @@
   <p>ドメインB</p>
   <script>
     (function() {
-      var origin = 'https://localhost:4200';
+      var origin = 'http://localhost:4200';
       window.addEventListener('message', function(event) {
         if(event.origin === origin) {
           var message = event.data;
@@ -16,7 +16,7 @@
             var messageArray = message.split(',');
             var key = messageArray[0];
             var value = messageArray[1];
-            localStorage.setItem(key, value);
+            sessionStorage.setItem(key, value);
           }
         } else {
           console.log(event.origin);
