@@ -3,9 +3,9 @@
   <p>ドメインB</p>
   <script>
     (function() {
-      alert(event.origin);
       var origin = 'http://localhost:4200';
       window.addEventListener('message', function(event) {
+        alert(event.origin);
         if(event.origin === origin) {
           var message = event.data;
 
